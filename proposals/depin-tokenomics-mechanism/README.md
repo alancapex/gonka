@@ -1,10 +1,10 @@
 # Proposal: A DePIN-Native Tokenomics Mechanism for GNK
 
-Nov 16, 2026
+Nov 26, 2026
 
 **Proposer:** Ancapex Team
 
-**Status:** draft v0.4 · pre-proposal for discussion (no on-chain vote requested)
+**Status:** proposal for on-chain vote
 
 ## Summary
 
@@ -17,6 +17,8 @@ This proposal funds the design of an alternative mechanism that we consider bett
 We read a utility token as the settlement currency of its network, not as a share in it. A share is valued by the profit left for its holders; a currency is valued by the volume of work settled in it and by the rule that governs its supply. On that reading emission is the network's monetary policy, and it should respond to the work the network does, not only to the calendar.
 
 The design also has to start from Gonka's own situation. Inside the network, the mechanism has to work with the escrow through which work is paid for, and extend beyond inference to other kinds of work, such as training. Outside it, Gonka is not a crypto project in a vacuum: it competes with AI inference providers that subsidise their prices, and the calibration has to take those subsidies into account.
+
+The goal of this proposal is to design and test this important mechanism quickly without overloading the core team.
 
 ## What the mechanism is
 
@@ -55,9 +57,26 @@ Deliverable: a test suite and a report with the parameter ranges in which fake w
 
 Deliverable: public code and data, and a report with the parameter ranges in which the network survives.
 
+## Timeline
+
+The work takes two months from the day the proposal passes.
+
+- **End of month one:** a draft of the specifications, the tests and the model report is published as a pull request to `gonka-ai/gonka`, open for review.
+- **End of month two:** the final version, revised after review.
+
 ## Payment Request
 
-We request **50,000 USDT and 200,000 GNK** to fund work on all four items.
+We request **50,000 USDT and 200,000 GNK** to fund two months of work on all four items.
+
+- **Recipient:** `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09`
+- **Payment:** a single transfer of the full amount when this proposal is executed: GNK from the Community Pool, USDT from the community-sale contract.
+
+## Terms
+
+1. **Fixed fee.** The amount is a fixed fee for the work described here. It is not a grant, a loan or an investment.
+2. **Paid upfront.** The fee is paid in full when the proposal is executed, with no escrow, vesting or clawback.
+3. **Timeline.** We are confident in the timeline. We cannot guarantee it absolutely, because force majeure is always possible.
+4. **Open source.** Everything produced under this proposal is published openly.
 
 ## Why This Team
 
@@ -67,7 +86,7 @@ Ancapex is a team with experience in, and a focus on, AI and crypto. We are an e
 
 ## Funded-Work Rules
 
-- **Open source:** specifications in `proposals/` of the main repo; simulator, tests and data in [repo, licence].
+- **Open source:** specifications in `proposals/` of the main repo; simulator, tests and data in a public repository under an open-source licence.
 - **No closed dependencies:** external price sources must be replaceable; the rate rule does not depend on a single feed.
 - **Support:** after the final report: updating the model on new epochs, and participation in the parameter votes.
 - **Handoff:** a simulator README with the procedure for calibrating on fresh chain data.
@@ -79,6 +98,12 @@ Ancapex is a team with experience in, and a focus on, AI and crypto. We are an e
 - **After each item:** a report in Discussions — artifacts, deviations, spending.
 - **After the stress tests:** a walkthrough of the results on a community call.
 - **Final report:** spending by line, remainder, and a recommendation on implementation.
+
+## Requested Vote
+
+**YES** — the community funds the work described above and transfers 50,000 USDT and 200,000 GNK to `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09`.
+
+**NO** — the work is not funded. Network parameters do not change in either case.
 
 ## Sources
 
