@@ -1,10 +1,10 @@
 # Proposal: Decision Models on Gonka
 
-Nov 16, 2026
+Nov 26, 2026
 
 **Proposer:** Ancapex Team
 
-**Status:** draft v0.5 · pre-proposal for discussion (no on-chain vote requested)
+**Status:** proposal for on-chain vote
 
 ## Summary
 
@@ -13,6 +13,8 @@ Gonka needs to grow, and hardware is one of the things holding it back: the GPUs
 Paradoxically, a new class of models has appeared that runs on modest hardware and is in demand: decision models. We propose to bring this class to Gonka.
 
 This document explains what the class is and the six pieces of work we plan: five to get it running on testnet, and a reference training scheme for later.
+
+The goal of this proposal is to develop this important feature quickly without overloading the core team.
 
 ## What a decision model is
 
@@ -24,7 +26,7 @@ Jev's weights are closed, but open-weight models followed within weeks, from Per
 
 ## What we will do and deliverables
 
-There will be an interim sync with the core team to review the work.
+All six items are planned for two months in total, with an interim sync with the core team to review the work.
 
 **1. Integrate into confirmation PoC (cPoC).** A host's weight is confirmed during the epoch by confirmation PoC. Hosts that serve decision models on smaller GPUs have to take part in it on the same terms as everyone else, and the check has to coexist with serving decision requests.
 
@@ -50,9 +52,26 @@ There will be an interim sync with the core team to review the work.
 
 *Deliverable:* a documented, reproducible training scheme that can later be integrated with the training mechanism being prepared for Gonka, so the network can produce its own decision models and not only serve third-party ones.
 
+## Timeline
+
+The work takes two months from the day the proposal passes.
+
+- **End of month one:** a draft is published as a pull request to `gonka-ai/gonka`, open for review.
+- **End of month two:** the final solution: the pull request revised after review, the class running on testnet, and the training scheme.
+
 ## Payment Request
 
-We request **40,000 USDT and 150,000 GNK** to fund work on all six items.
+We request **40,000 USDT and 150,000 GNK** to fund two months of work on all six items.
+
+- **Recipient:** `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09`
+- **Payment:** a single transfer of the full amount when this proposal is executed: GNK from the Community Pool, USDT from the community-sale contract.
+
+## Terms
+
+1. **Fixed fee.** The amount is a fixed fee for the work described here. It is not a grant, a loan or an investment.
+2. **Paid upfront.** The fee is paid in full when the proposal is executed, with no escrow, vesting or clawback.
+3. **Timeline.** We are confident in the timeline. We cannot guarantee it absolutely, because force majeure is always possible.
+4. **Open source.** Everything produced under this proposal is published openly.
 
 ## Why This Team
 
@@ -62,7 +81,7 @@ Ancapex is a team with experience in, and a focus on, AI and crypto. We are an e
 
 ## Funded-Work Rules
 
-- **Open source:** specifications in `proposals/` of the main repo; code as a PR to `gonka-ai/gonka`; measurements and the training scheme in [repo, licence].
+- **Open source:** specifications in `proposals/` of the main repo; code as a PR to `gonka-ai/gonka`; measurements and the training scheme in a public repository under an open-source licence.
 - **Open models only:** base models with open weights under a permissive licence; no dependency on a vendor's API.
 - **Support:** after the testnet launch: fixes, and participation in the votes on models and weight.
 - **Handoff:** documentation for hosts on serving the class, and the procedure for adding or replacing a decision model.
@@ -73,7 +92,13 @@ Ancapex is a team with experience in, and a focus on, AI and crypto. We are an e
 - Interim: a review sync with the core team.
 - After each item: a report in Discussions — artifacts, deviations, spending.
 - After the testnet launch: a walkthrough of the results on a community call.
-- Final report: spending by line, remainder, and a recommendation on a mainnet vote.
+- Final report, at the end of month two: spending by line, remainder, and a recommendation on a mainnet vote.
+
+## Requested Vote
+
+**YES** — the community funds the work described above and transfers 40,000 USDT and 150,000 GNK to `gonka10mmdjau4dnj8krs7sh7t7635ttnmq9u3vqgz09`.
+
+**NO** — the work is not funded. Network parameters do not change in either case.
 
 ## Sources
 
